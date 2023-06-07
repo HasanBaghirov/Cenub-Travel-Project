@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li a {
+  list-style: none;
+  text-decoration: none;
+}
+
+nav .nav-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+nav .nav-box img {
+  width: 7em;
+}
+nav .nav-box .list-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 35%;
+}
+nav .nav-box .list-content a {
+  font-size: 1em;
+  color: inherit;
+}
+nav .nav-box h3 {
+  font-size: 1em;
+}
+nav .nav-box h3 i {
+  color: red;
+  gap: 30px;
+}
+nav .nav-box .fa-bars {
+  display: none;
+  font-size: 1.3em;
+}
+nav .your-class .slick-prev {
+  display: none !important;
+}
+nav .your-class .slick-next {
+  display: none !important;
+}
+nav .your-class .my_slide_item {
+  height: 550px;
+  border: 2px solid #ccc;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+nav .your-class .my_slide_item .text-slide {
+  margin-top: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px black;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+nav .your-class .my_slide_item .text-slide button {
+  color: white;
+  padding: 15px 35px;
+  background-color: rgb(30, 198, 182);
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav .your-class .my_slide_item .text-slide button:hover {
+  background-color: rgb(218, 42, 42);
+  transition: 0.6s;
+}
+nav .your-class .banner1 {
+  background-image: url("https://media.istockphoto.com/id/473976474/tr/foto%C4%9Fraf/river-in-hirkan-national-park-in-lankaran-azerbaijan.jpg?b=1&s=612x612&w=0&k=20&c=H7lD5K9IgsYWyN-5A8C9dtEZTvoDjzkdl6_lV_VTPY4=");
+}
+nav .your-class .banner2 {
+  background-image: url("https://cenublu.az/wp-content/uploads/2021/09/oblozhka1.jpg");
+}
+nav .your-class .banner3 {
+  background-image: url("https://turlar.az/uploads/news/155194296018586515305c80c53096b95.jpg");
+}
+nav .your-class .banner4 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Lerik_Azerbaijan_01.JPG/640px-Lerik_Azerbaijan_01.JPG");
+}
+nav .your-class .banner5 {
+  background-image: url("https://qadin.net/uploads/posts/2013-08/1377093916_c5.jpg");
+}
+nav .your-class .banner6 {
+  background-image: url("https://e-tibb.az/upload/enterprises/3320023.jpg");
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}/*# sourceMappingURL=main.css.map */
