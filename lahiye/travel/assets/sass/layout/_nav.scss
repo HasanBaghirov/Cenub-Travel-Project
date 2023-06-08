@@ -1,33 +1,35 @@
-nav {
-  .nav-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-
-    img {
-      width: 7em;
-    }
-    .list-content {
+header {
+  nav {
+    .nav-box {
       display: flex;
-      justify-content: space-around;
       align-items: center;
-      width: 35%;
-      a {
+      justify-content: space-between;
+      padding: 20px;
+
+      img {
+        width: 7em;
+      }
+      .list-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 53%;
+        a {
+          font-size: 1em;
+          color: inherit;
+        }
+      }
+      h3 {
         font-size: 1em;
-        color: inherit;
+        i {
+          color: red;
+          gap: 30px;
+        }
       }
-    }
-    h3 {
-      font-size: 1em;
-      i {
-        color: red;
-        gap: 30px;
+      .hamburger {
+        display: none;
+        font-size: 1.3em;
       }
-    }
-    .fa-bars {
-      display: none;
-      font-size: 1.3em;
     }
   }
   //! slide show  start
@@ -79,6 +81,9 @@ nav {
           }
         }
       }
+      // .open{
+
+      // }
     }
     .banner1 {
       // lankaran
@@ -104,89 +109,56 @@ nav {
       // masalli
       background-image: url("https://e-tibb.az/upload/enterprises/3320023.jpg");
     }
-
-    // .banner1 {
-    //   border: 2px solid red;
-    //   background-image: url("https://preview.colorlib.com/theme/travelo/img/banner/banner3.png");
-    //   background-repeat: no-repeat;
-    //   object-fit: cover;
-    //   .text-slide {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     flex-direction: column;
-    //     gap: 10px;
-    //     margin-top: 160px;
-    //     color: white;
-    //     font-size: 2.5rem;
-    //     font-weight: 300;
-    //     text-shadow: 1px 1px 3px black;
-    //     text-align: center;
-    //     text-transform: uppercase;
-    //     letter-spacing: 1px;
-    //     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    //       "Lucida Sans", Arial, sans-serif;
-    //     button {
-    //       color: white;
-    //       padding: 15px 35px;
-    //       background-color: rgb(30, 198, 182);
-    //       font-size: 0.8rem;
-    //       font-weight: 300;
-    //       text-shadow: 1px 1px 3px black;
-    //       border: none;
-    //       border-radius: 5px;
-    //       cursor: pointer;
-    //       &:hover {
-    //         background-color: rgb(218, 42, 42);
-    //         transition: 0.6s;
-    //       }
-    //     }
-    //   }
-    // }
-    // .banner2 {
-    //   background-image: url("https://preview.colorlib.com/theme/travelo/img/banner/banner.png");
-    //   background-repeat: no-repeat;
-    //   object-fit: cover;
-    //   .text-slide {
-    //     margin-top: 160px;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     flex-direction: column;
-    //     gap: 10px;
-    //     color: white;
-    //     font-size: 2.5rem;
-    //     font-weight: 300;
-    //     text-shadow: 1px 1px 3px black;
-    //     text-align: center;
-    //     text-transform: uppercase;
-    //     letter-spacing: 1px;
-    //     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    //       "Lucida Sans", Arial, sans-serif;
-    //     button {
-    //       color: white;
-    //       padding: 15px 35px;
-    //       background-color: rgb(30, 198, 182);
-    //       font-size: 0.8rem;
-    //       font-weight: 300;
-    //       text-shadow: 1px 1px 3px black;
-    //       border: none;
-    //       border-radius: 5px;
-    //       cursor: pointer;
-    //       &:hover {
-    //         background-color: rgb(218, 42, 42);
-    //         transition: 0.6s;
-    //       }
-    //     }
-    //   }
-    // }
-    // .banner3 {
-    //   height: 100vh;
-    //   background-image: url("https://preview.colorlib.com/theme/travelo/img/banner/banner2.png");
-    //   background-repeat: no-repeat;
-    //   object-fit: cover;
-
-    // }
   }
 }
-//! slide show  end
+.nav-res {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  z-index: -1;
+  transform: 400ms;
+}
+
+@media screen and (max-width: 320px) {
+ header{
+  nav {
+    .nav-box {
+      max-width: 1440px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 4em;
+      }
+      .list-content {
+        display: none;
+      }
+      h3 {
+        display: none;
+      }
+      button.hamburger.hamburger--spin {
+        display: block;
+        font-size: 13px;
+      }
+    }
+  }
+ 
+  .list-content-res{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    a{
+      color: black;
+      &:hover{
+        color: rgb(255, 0, 0);
+      }
+    }
+  
+  }
+ }
+ }
+

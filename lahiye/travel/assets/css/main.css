@@ -9,43 +9,43 @@ ul, li a {
   text-decoration: none;
 }
 
-nav .nav-box {
+header nav .nav-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
 }
-nav .nav-box img {
+header nav .nav-box img {
   width: 7em;
 }
-nav .nav-box .list-content {
+header nav .nav-box .list-content {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 35%;
+  width: 53%;
 }
-nav .nav-box .list-content a {
+header nav .nav-box .list-content a {
   font-size: 1em;
   color: inherit;
 }
-nav .nav-box h3 {
+header nav .nav-box h3 {
   font-size: 1em;
 }
-nav .nav-box h3 i {
+header nav .nav-box h3 i {
   color: red;
   gap: 30px;
 }
-nav .nav-box .fa-bars {
+header nav .nav-box .hamburger {
   display: none;
   font-size: 1.3em;
 }
-nav .your-class .slick-prev {
+header .your-class .slick-prev {
   display: none !important;
 }
-nav .your-class .slick-next {
+header .your-class .slick-next {
   display: none !important;
 }
-nav .your-class .my_slide_item {
+header .your-class .my_slide_item {
   height: 550px;
   border: 2px solid #ccc;
   background-position: top;
@@ -55,7 +55,7 @@ nav .your-class .my_slide_item {
   place-items: center;
   color: white;
 }
-nav .your-class .my_slide_item .text-slide {
+header .your-class .my_slide_item .text-slide {
   margin-top: 160px;
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@ nav .your-class .my_slide_item .text-slide {
   letter-spacing: 1px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-nav .your-class .my_slide_item .text-slide button {
+header .your-class .my_slide_item .text-slide button {
   color: white;
   padding: 15px 35px;
   background-color: rgb(30, 198, 182);
@@ -82,31 +82,209 @@ nav .your-class .my_slide_item .text-slide button {
   border-radius: 5px;
   cursor: pointer;
 }
-nav .your-class .my_slide_item .text-slide button:hover {
+header .your-class .my_slide_item .text-slide button:hover {
   background-color: rgb(218, 42, 42);
   transition: 0.6s;
 }
-nav .your-class .banner1 {
+header .your-class .banner1 {
   background-image: url("https://media.istockphoto.com/id/473976474/tr/foto%C4%9Fraf/river-in-hirkan-national-park-in-lankaran-azerbaijan.jpg?b=1&s=612x612&w=0&k=20&c=H7lD5K9IgsYWyN-5A8C9dtEZTvoDjzkdl6_lV_VTPY4=");
 }
-nav .your-class .banner2 {
+header .your-class .banner2 {
   background-image: url("https://cenublu.az/wp-content/uploads/2021/09/oblozhka1.jpg");
 }
-nav .your-class .banner3 {
+header .your-class .banner3 {
   background-image: url("https://turlar.az/uploads/news/155194296018586515305c80c53096b95.jpg");
 }
-nav .your-class .banner4 {
+header .your-class .banner4 {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Lerik_Azerbaijan_01.JPG/640px-Lerik_Azerbaijan_01.JPG");
 }
-nav .your-class .banner5 {
+header .your-class .banner5 {
   background-image: url("https://qadin.net/uploads/posts/2013-08/1377093916_c5.jpg");
 }
-nav .your-class .banner6 {
+header .your-class .banner6 {
   background-image: url("https://e-tibb.az/upload/enterprises/3320023.jpg");
 }
 
+.nav-res {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  z-index: -1;
+  transform: 400ms;
+}
+
+@media screen and (max-width: 320px) {
+  header nav .nav-box {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav .nav-box img {
+    width: 4em;
+  }
+  header nav .nav-box .list-content {
+    display: none;
+  }
+  header nav .nav-box h3 {
+    display: none;
+  }
+  header nav .nav-box button.hamburger.hamburger--spin {
+    display: block;
+    font-size: 13px;
+  }
+  header .list-content-res {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  header .list-content-res a {
+    color: black;
+  }
+  header .list-content-res a:hover {
+    color: rgb(255, 0, 0);
+  }
+}
 .container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+}
+
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/*
+     * Spin Reverse
+     */
+.hamburger--spin-r .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin-r .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin-r .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin-r.is-active .hamburger-inner {
+  transform: rotate(-225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin-r.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger--spin-r.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 18px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
 }/*# sourceMappingURL=main.css.map */
